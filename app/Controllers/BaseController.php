@@ -56,7 +56,7 @@ abstract class BaseController extends Controller
 
         // Preload any models, libraries, etc, here.
         // Load constants from the database
-        $this->loadConstants();
+//        $this->loadConstants();
 
         // E.g.: $this->session = \Config\Services::session();
     }
@@ -67,32 +67,32 @@ abstract class BaseController extends Controller
      *
      * @return void
      */
-    protected function loadConstants()
-    {
-        // Connect to the database
-        echo ENVIRONMENT;
-        $this->db = \Config\Database::connect();
-//        dd($this->db->listTables());
-//        if (!$this->db->connID) {
-//            dd('Database connection failed:', $this->db->getLastQuery());
-//        } else {
-//            dd('Database connection successful:', $this->db);
+//    protected function loadConstants()
+//    {
+//        // Connect to the database
+//        echo ENVIRONMENT;
+//        $this->db = \Config\Database::connect();
+////        dd($this->db->listTables());
+////        if (!$this->db->connID) {
+////            dd('Database connection failed:', $this->db->getLastQuery());
+////        } else {
+////            dd('Database connection successful:', $this->db);
+////        }
+////        dd($this->db);
+//
+//        // Query the 'app_constants' table
+//        $builder = $this->db->table('app_constants');
+//        $builder->whereIn('environment', ['all', ENVIRONMENT]); // Include 'all' and current environment
+//        $query = $builder->get();
+//
+//        // Check if constants exist and load them
+//        if ($query->getNumRows() > 0) {
+//            foreach ($query->getResult() as $row) {
+//                if (!defined($row->name)) {
+//                    define($row->name, $row->value); // Define the constant if not already defined
+//                }
+//                $this->constants[$row->name] = $row->value; // Store it in the array for reference
+//            }
 //        }
-//        dd($this->db);
-
-        // Query the 'app_constants' table
-        $builder = $this->db->table('app_constants');
-        $builder->whereIn('environment', ['all', ENVIRONMENT]); // Include 'all' and current environment
-        $query = $builder->get();
-
-        // Check if constants exist and load them
-        if ($query->getNumRows() > 0) {
-            foreach ($query->getResult() as $row) {
-                if (!defined($row->name)) {
-                    define($row->name, $row->value); // Define the constant if not already defined
-                }
-                $this->constants[$row->name] = $row->value; // Store it in the array for reference
-            }
-        }
-    }
+//    }
 }
