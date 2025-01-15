@@ -24,16 +24,43 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
+//    public array $default = [
+//        'DSN'          => '',
+//        'hostname'     => 'db',
+//        'username'     => 'root',
+//        'password'     => '',
+//        'database'     => 'ci4',
+//        'DBDriver'     => 'MySQLi',
+//        'DBPrefix'     => '',
+//        'pConnect'     => false,
+//        'DBDebug'      => true,
+//        'charset'      => 'utf8mb4',
+//        'DBCollat'     => 'utf8mb4_general_ci',
+//        'swapPre'      => '',
+//        'encrypt'      => false,
+//        'compress'     => false,
+//        'strictOn'     => false,
+//        'failover'     => [],
+//        'port'         => 3307,
+//        'numberNative' => false,
+//        'dateFormat'   => [
+//            'date'     => 'Y-m-d',
+//            'datetime' => 'Y-m-d H:i:s',
+//            'time'     => 'H:i:s',
+//        ],
+//    ];
+
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'db',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'ci4',
+        'hostname'     => '5.161.220.216',
+        'username'     => 'mysql',
+        'password'     => 'MHv1JKcqbgrB0bWGJa1KLqa4Ja4KhGZl1XUlwwYvqjHnjnBLhNURpxQAMDNhD3H6',
+        'database'     => 'default',
+//        'DBDriver'     => 'MySQLi',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
-        'DBDebug'      => true,
+        'DBDebug'      => true, // Set to true here
         'charset'      => 'utf8mb4',
         'DBCollat'     => 'utf8mb4_general_ci',
         'swapPre'      => '',
@@ -41,7 +68,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3307,
+        'port'         => 5432, // Ensure this matches your MySQL port (default 3306)
         'numberNative' => false,
         'dateFormat'   => [
             'date'     => 'Y-m-d',
