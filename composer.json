@@ -14,7 +14,14 @@
         "ext-intl": "*",
         "ext-mbstring": "*",
         "laminas/laminas-escaper": "^2.13",
-        "psr/log": "^3.0"
+        "psr/log": "^3.0",
+        "ext-pdo_mysql": "*",
+        "aws/aws-sdk-php": "^3.336",
+        "codeigniter4/framework": "^4.4",
+        "filp/whoops": "^2.16",
+        "firebase/php-jwt": "^6.10",
+        "ramsey/uuid": "^4.7",
+        "stripe/stripe-php": "^16.3"
     },
     "require-dev": {
         "codeigniter/coding-standard": "^1.7",
@@ -24,7 +31,8 @@
         "mikey179/vfsstream": "^1.6",
         "nexusphp/cs-config": "^3.6",
         "phpunit/phpunit": "^10.5.16",
-        "predis/predis": "^1.1 || ^2.0"
+        "predis/predis": "^1.1 || ^2.0",
+
     },
     "suggest": {
         "ext-curl": "If you use CURLRequest class",
