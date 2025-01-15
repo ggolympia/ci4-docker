@@ -72,13 +72,13 @@ abstract class BaseController extends Controller
         // Connect to the database
         echo ENVIRONMENT;
         $this->db = \Config\Database::connect();
-        dd($this->db->listTables());
+//        dd($this->db->listTables());
 //        if (!$this->db->connID) {
 //            dd('Database connection failed:', $this->db->getLastQuery());
 //        } else {
 //            dd('Database connection successful:', $this->db);
 //        }
-        dd($this->db);
+//        dd($this->db);
 
         // Query the 'app_constants' table
         $builder = $this->db->table('app_constants');

@@ -17,6 +17,7 @@ class Home extends BaseController
     public function hello()
     {
         $data = ['message' => 'Hello, World!'];
+        echo ENVIRONMENT;
         //add the header here
          return $this->respond($data);
     }
